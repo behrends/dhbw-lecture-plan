@@ -9,6 +9,7 @@ export default function Lectures() {
   }, [])
 
   const fetchLectures = async () => {
+    if(!supabase) return;
     let { data: lectures, error } = await supabase.from('Lectures').select('*').order('id', true);
     if (error) console.log('error', error);    
     else setLectures(lectures);
