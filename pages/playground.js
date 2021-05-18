@@ -1,5 +1,5 @@
-import TestComponent from '../components/TestComponent';
+import Lectures from '../components/Lectures';
 
 export default function Playground() {
-  return <TestComponent />;
+  return <Lectures />;
 }

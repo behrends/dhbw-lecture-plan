@@ -13,6 +13,7 @@ export default function Lectures() {
     let { data: lectures, error } = await supabase.from('Lectures').select('*').order('id', true);
     if (error) console.log('error', error);    
     else setLectures(lectures);
+    // await supabase.from('Lecturers').insert([{ last_name: 'TESTDOZI' }]);
   }
 
   return (
