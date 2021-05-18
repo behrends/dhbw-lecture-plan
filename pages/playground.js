@@ -1,5 +1,5 @@
 import TestComponent from '../components/TestComponent';
 
-export default function Testing() {
+export default function Playground() {
   return <TestComponent />;
 }
