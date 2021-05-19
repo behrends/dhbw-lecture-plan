@@ -1,27 +1,38 @@
-import {useEffect, useState} from 'react';
-import { supabase } from '../lib/initSupabase'
+import { useEffect, useState } from 'react';
+import { Box, Heading, Stack, Text } from '@chakra-ui/react';
+import { supabase } from '../lib/initSupabase';
 
 export default function Lectures() {
   const [lectures, setLectures] = useState([]);
 
   useEffect(() => {
-    fetchLectures()
-  }, [])
+    fetchLectures();
+  }, []);
 
   const fetchLectures = async () => {
-    if(!supabase) return;
-    let { data: lectures, error } = await supabase.from('Lectures').select('*').order('id', true);
-    if (error) console.log('error', error);    
+    if (!supabase) return;
+    let { data: lectures, error } = await supabase
+      .from('Lectures')
+      .select('id, title')
+      .eq('semester', 1); // TIF20A, 3. Semester
+    if (error) console.log('error', error);
     else setLectures(lectures);
-    // await supabase.from('Lecturers').insert([{ last_name: 'TESTDOZI' }]);
-  }
+  };
 
   return (
-    <div>
-      <h1>LECTURES</h1>
-      <ul>
-          {lectures.map((lecture) => <li key={lecture.id}>{lecture.title}</li>)}
-      </ul>
-    </div>
+    <Stack spacing={3}>
+      <Heading>Vorlesungen in TIF20A 3. Semester</Heading>
+      {lectures.map((lecture) => (
+        <Box
+          key={lecture.id}
+          p={3}
+          w="50%"
+          shadow="md"
+          borderWidth="1px"
+        >
+          <Text>{lecture.title}</Text>
+        </Box>
+      ))}
+    </Stack>
   );
 }
