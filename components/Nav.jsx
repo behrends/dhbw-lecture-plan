@@ -15,7 +15,7 @@ const Nav = () => {
           <Link href="/playground">Playground</Link>
         </li>
         <li>
-          <Link href="/planning">Vorlesungsplanung</Link>
+          <Link href="/courses">Kurse</Link>
         </li>
         <li>
           <Link href="/about">Über</Link>
