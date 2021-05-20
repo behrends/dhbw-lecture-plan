@@ -1,6 +1,6 @@
 import { Heading } from '@chakra-ui/react';
-import { supabase } from '../lib/initSupabase';
-import CourseList from '../components/CourseList';
+import { supabase } from '../../lib/initSupabase';
+import CourseList from '../../components/CourseList';
 
 export default function Courses({ courses }) {
   return (

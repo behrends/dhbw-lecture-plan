@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Box, Stack, Text } from '@chakra-ui/react';
 
 export default function CourseList({ courses }) {
@@ -12,7 +13,9 @@ export default function CourseList({ courses }) {
           borderWidth="1px"
           borderRadius="4px"
         >
-          <Text>{course.name}</Text>
+          <Link href={`/courses/${course.id}`}>
+            <Text cursor="pointer">{course.name}</Text>
+          </Link>
         </Box>
       ))}
     </Stack>
