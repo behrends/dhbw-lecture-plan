@@ -13,7 +13,12 @@ export default function CourseList({ courses }) {
           borderWidth="1px"
           borderRadius="4px"
         >
-          <Link href={`/courses/${course.id}`}>
+          <Link
+            href={{
+              pathname: `/courses/${course.id}`,
+              query: { course: course.name },
+            }}
+          >
             <Text cursor="pointer">{course.name}</Text>
           </Link>
         </Box>
