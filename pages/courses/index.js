@@ -1,10 +1,12 @@
 import { Heading } from '@chakra-ui/react';
 import { supabase } from '../../lib/initSupabase';
+import PageHead from '../../components/PageHead';
 import CourseList from '../../components/CourseList';
 
 export default function Courses({ courses }) {
   return (
     <>
+      <PageHead title="Kurse" />
       <Heading>Kurse</Heading>
       <CourseList courses={courses} />
     </>

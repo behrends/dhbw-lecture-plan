@@ -1,3 +1,10 @@
+import PageHead from '../components/PageHead';
+
 export default function About() {
-  return <p>Über diese Seite</p>;
+  return (
+    <>
+      <PageHead title="Über" />
+      <p>Über diese Seite</p>
+    </>
+  );
 }

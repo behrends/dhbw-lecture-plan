@@ -1,15 +1,10 @@
-import Head from 'next/head';
 import { Box, Heading } from '@chakra-ui/react';
+import PageHead from '../components/PageHead';
 
 export default function Home() {
   return (
     <Box>
-      <Head>
-        <title>DHBW Studienplan</title>
-        <meta name="description" content="DHBW Studienplan" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
+      <PageHead title="DHBW Studienplan" />
       <Heading>DHBW Studienplan</Heading>
     </Box>
   );
