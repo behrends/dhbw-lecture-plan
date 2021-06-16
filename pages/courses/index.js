@@ -1,5 +1,5 @@
 import { Heading } from '@chakra-ui/react';
-import { supabase } from '../../lib/initSupabase';
+import { supabase } from '../../lib/dbapi';
 import PageHead from '../../components/PageHead';
 import CourseList from '../../components/CourseList';
 

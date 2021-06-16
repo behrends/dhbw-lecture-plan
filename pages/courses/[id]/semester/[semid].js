@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import { supabase } from '../../../../lib/initSupabase';
+import { supabase } from '../../../../lib/dbapi';
 import Lectures from '../../../../components/Lectures';
 
 export default function Semester({ lectures }) {
