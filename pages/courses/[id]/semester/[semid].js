@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
-import { supabase } from '../../../../lib/dbapi';
-import Lectures from '../../../../components/Lectures';
+import { supabase } from '../../../../src/dbapi';
+import Lectures from '../../../../src/components/Lectures';
 
 export default function Semester({ lectures }) {
   const router = useRouter();

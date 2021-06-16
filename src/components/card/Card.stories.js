@@ -2,7 +2,7 @@ import { withDesign } from 'storybook-addon-designs';
 import Card from './Card';
 
 export default {
-  title: 'Card',
+  title: 'Components/Card',
   component: Card,
   decorators: [withDesign],
 };

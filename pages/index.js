@@ -1,5 +1,5 @@
 import { Box, Heading, Text } from '@chakra-ui/react';
-import PageHead from '../components/PageHead';
+import PageHead from '../src/components/PageHead';
 
 export default function Home() {
   return (

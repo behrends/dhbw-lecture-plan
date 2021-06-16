@@ -1,4 +1,4 @@
-import PageHead from '../components/PageHead';
+import PageHead from '../src/components/PageHead';
 
 export default function About() {
   return (

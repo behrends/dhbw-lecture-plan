@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Box, Heading, Stack, Text } from '@chakra-ui/react';
-import { supabase } from '../../lib/dbapi';
+import { supabase } from '../../src/dbapi';
 
 export default function Course({ semester }) {
   const router = useRouter();

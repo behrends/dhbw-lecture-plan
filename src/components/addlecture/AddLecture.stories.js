@@ -1,7 +1,7 @@
 import AddLecture from './AddLecture';
 
 export default {
-  title: 'AddLecture',
+  title: 'Components/AddLecture',
   component: AddLecture,
 };
 
