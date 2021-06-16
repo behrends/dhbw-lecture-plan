@@ -1,6 +1,6 @@
 import { Box, Center, Text } from '@chakra-ui/react';
 
-export default function Card({ title }) {
+export default function Card({ title, ...rest }) {
   return (
     <Center
       maxW="180px"
@@ -9,6 +9,7 @@ export default function Card({ title }) {
       borderRadius="3xl"
       boxShadow="lg"
       padding="20px"
+      {...rest}
     >
       <Text fontSize="3xl">{title}</Text>
     </Center>

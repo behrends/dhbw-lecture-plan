@@ -1,27 +1,20 @@
 import Link from 'next/link';
-import { Box, Stack, Text } from '@chakra-ui/react';
+import { Stack } from '@chakra-ui/react';
+import Card from './card/Card';
 
 export default function CourseList({ courses }) {
   return (
     <Stack spacing={3}>
       {courses.map((course) => (
-        <Box
+        <Link
           key={course.id}
-          p={3}
-          w="50%"
-          shadow="md"
-          borderWidth="1px"
-          borderRadius="4px"
+          href={{
+            pathname: `/courses/${course.id}`,
+            query: { course: course.name },
+          }}
         >
-          <Link
-            href={{
-              pathname: `/courses/${course.id}`,
-              query: { course: course.name },
-            }}
-          >
-            <Text cursor="pointer">{course.name}</Text>
-          </Link>
-        </Box>
+          <Card cursor="pointer" title={course.name} />
+        </Link>
       ))}
     </Stack>
   );
