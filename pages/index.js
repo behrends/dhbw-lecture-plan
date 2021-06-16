@@ -15,6 +15,16 @@ export default function Home() {
         Ein Beispiel-Projekt u.a. für die Lehrveranstaltungen
         Web-Engineering und Anwendungsprojekt.
       </Text>
+      <Text>
+        Code bei GitHub:{' '}
+        <a
+          href="https://github.com/behrends/dhbw-lecture-plan/"
+          target="blank"
+          style={{ color: 'blue' }}
+        >
+          github.com/behrends/dhbw-lecture-plan
+        </a>
+      </Text>
     </Box>
   );
 }
