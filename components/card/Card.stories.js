@@ -11,7 +11,7 @@ const Template = (args) => <Card {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  title: 'Meine Karte',
+  title: 'TIF20A',
 };
 
 Default.parameters = {
