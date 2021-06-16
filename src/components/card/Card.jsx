@@ -1,4 +1,4 @@
-import { Box, Center, Text } from '@chakra-ui/react';
+import { Center, Text } from '@chakra-ui/react';
 
 export default function Card({ title, ...rest }) {
   return (
