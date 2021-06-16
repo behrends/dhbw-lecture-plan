@@ -1,14 +1,12 @@
-import { Heading } from '@chakra-ui/react';
 import { supabase } from '../../src/dbapi';
 import PageHead from '../../src/components/PageHead';
-import CourseList from '../../src/components/CourseList';
+import Courses from '../../src/screens/courses/Courses';
 
-export default function Courses({ courses }) {
+export default function CoursePage({ courses }) {
   return (
     <>
       <PageHead title="Kurse" />
-      <Heading>Kurse</Heading>
-      <CourseList courses={courses} />
+      <Courses courses={courses} />
     </>
   );
 }

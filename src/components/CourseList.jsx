@@ -1,10 +1,10 @@
 import Link from 'next/link';
-import { Stack } from '@chakra-ui/react';
+import { SimpleGrid } from '@chakra-ui/react';
 import Card from './card/Card';
 
 export default function CourseList({ courses }) {
   return (
-    <Stack spacing={3}>
+    <SimpleGrid columns={4} spacing={10}>
       {courses.map((course) => (
         <Link
           key={course.id}
@@ -16,6 +16,6 @@ export default function CourseList({ courses }) {
           <Card cursor="pointer" title={course.name} />
         </Link>
       ))}
-    </Stack>
+    </SimpleGrid>
   );
 }
