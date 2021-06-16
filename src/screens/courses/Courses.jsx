@@ -1,5 +1,12 @@
+import { Stack } from '@chakra-ui/react';
+import ActionButton from '../../components/buttons/ActionButton';
 import CourseList from '../../components/CourseList';
 
 export default function Courses({ courses }) {
-  return <CourseList courses={courses} />;
+  return (
+    <Stack>
+      <ActionButton title="Neuer Kurs" />
+      <CourseList courses={courses} />
+    </Stack>
+  );
 }
