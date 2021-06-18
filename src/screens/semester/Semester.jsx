@@ -8,6 +8,10 @@ import {
   Th,
   Tr,
 } from '@chakra-ui/react';
+import moment from 'moment';
+import 'moment/locale/de';
+
+moment.locale('de');
 
 export default function Semester({ course, semester }) {
   return (
@@ -34,9 +38,13 @@ export default function Semester({ course, semester }) {
               <Tr key={semester.id} cursor="pointer">
                 <Td>{semester.number}</Td>
                 <Td>
-                  {new Date(semester.start).toLocaleDateString()}
+                  {moment(semester.start).format(
+                    'dddd, Do MMMM YYYY'
+                  )}
                 </Td>
-                <Td>{new Date(semester.end).toLocaleDateString()}</Td>
+                <Td>
+                  {moment(semester.end).format('dddd, Do MMMM YYYY')}
+                </Td>
               </Tr>
             </Link>
           ))}
