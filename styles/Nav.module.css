@@ -1,7 +1,8 @@
 .nav {
   height: 50px;
   padding: 10px;
-  background: rgb(21, 100, 190);
+  background-color: rgb(233, 233, 233);
+  border-bottom: 1px solid #e2001a;
   color: #fff;
   display: flex;
   align-items: center;
@@ -16,5 +17,7 @@
 }
 
 .nav ul li a {
+  color: #e2001a;
+  font-weight: 500;
   margin: 5px 15px;
 }
